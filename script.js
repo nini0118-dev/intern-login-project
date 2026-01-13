@@ -1,3 +1,4 @@
+// 實習作業：登入系統
 const loginBtn = document.getElementById('loginBtn');
 const registerBtn = document.getElementById('registerBtn');
 const msg = document.getElementById('msg');
@@ -58,7 +59,7 @@ registerBtn.addEventListener('click', () => {
     if (!validateFormat(email, pwd)) return;
 
     if (localStorage.getItem(email) !== null) {
-        return showMessage("此帳號已註冊，請直接登入", "error");
+        return showMessage("此帳號已註冊，請點選登入", "error");
     }
 
     localStorage.setItem(email, pwd);
